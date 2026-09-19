@@ -1,6 +1,7 @@
 package com.metaindustria.api.service;
 
 import com.metaindustria.api.dto.FuncionarioRequest;
+import com.metaindustria.api.exception.MatriculaDuplicadaException;
 import com.metaindustria.api.exception.ResourceNotFoundException;
 import com.metaindustria.api.model.Funcionario;
 import com.metaindustria.api.repository.FuncionarioRepository;
@@ -16,6 +17,9 @@ public class FuncionarioService {
     private final FuncionarioRepository funcionarioRepository;
 
     public Funcionario criar(FuncionarioRequest dto) {
+        if (funcionarioRepository.existsByMatricula(dto.matricula)) {
+            throw new MatriculaDuplicadaException(dto.matricula);
+        }
         Funcionario f = new Funcionario();
         f.setNome(dto.nome);
         f.setMatricula(dto.matricula);
@@ -34,6 +38,9 @@ public class FuncionarioService {
     }
 
     public Funcionario atualizar(Long id, FuncionarioRequest dto) {
+        if (funcionarioRepository.existsByMatriculaAndIdNot(dto.matricula, id)) {
+            throw new MatriculaDuplicadaException(dto.matricula);
+        }
         Funcionario f = buscarPorId(id);
         f.setNome(dto.nome);
         f.setMatricula(dto.matricula);
