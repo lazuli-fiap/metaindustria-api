@@ -1,25 +1,45 @@
 # Metaindustria API
 
-Backend do grupo Metaindustria para a Sprint 3 (integracao com o app mobile
-`sprint-mobile`). Reescrito a partir do `securitymonitor-api` (Sprint 2),
-mas simplificado para seguir o padrao pedido no enunciado: camadas simples,
-CRUD basico, banco H2 em arquivo (sem Docker/Postgres).
+API REST Spring Boot do grupo Metaindustria (entrega final, Sprint 4), consumida
+pelo app mobile `sprint-mobile`. Derivada do `securitymonitor-api` (Sprint 2) e
+simplificada: camadas (controller/service/repository/model/dto), CRUD, banco H2 em
+arquivo (sem Docker/Postgres) e CORS liberado.
 
-> O `securitymonitor-api` deixou de estar acessivel para o grupo nesse
-> formato, por isso este repositorio novo foi criado como base da Sprint 3.
+**Problema.** Em ambientes industriais, saber quem esta habilitado a operar qual maquina
+e acompanhar as cameras de seguranca costuma ser feito em planilhas e papel. Esta API
+centraliza esses dados.
 
-## Stack
+**Entidade principal:** `Funcionario`, com `Certificado` (habilitacao para uma maquina)
+e `Camera` como entidades de apoio.
 
-- Java 17, Spring Boot 3.4.5
+## Integrantes
+
+| Nome | RM |
+|---|---|
+| [PREENCHER - nome completo] | [PREENCHER - RM] |
+| [PREENCHER - nome completo] | [PREENCHER - RM] |
+| [PREENCHER - nome completo] | [PREENCHER - RM] |
+
+## Links
+
+- **Backend (este repositorio):** https://github.com/lazuli-fiap/metaindustria-api
+- **Frontend (app Expo):** https://github.com/EmilyPereiraRibeiroAcad/sprint-mobile
+  (o README do frontend tem o passo a passo completo de integracao)
+- **Video de demonstracao (YouTube, nao listado):** [PREENCHER - link do video]
+
+## Stack e pre-requisitos
+
+- Java 17 (JDK), Spring Boot 3.4.5
 - Spring Web + Spring Data JPA
 - H2 (arquivo local, persiste entre reinicios)
-- Maven (wrapper incluso, nao precisa instalar Maven)
+- Maven: nao precisa instalar, o repositorio traz o wrapper (`mvnw`)
+- Para rodar o app junto: Node.js 20.19+ e Expo (ver README do frontend)
 
 ## Como rodar
 
-Pre-requisito: JDK 17.
-
 ```bash
+git clone https://github.com/lazuli-fiap/metaindustria-api.git
+cd metaindustria-api
 ./mvnw spring-boot:run
 ```
 
