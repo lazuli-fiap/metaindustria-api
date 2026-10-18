@@ -16,9 +16,11 @@ e `Camera` como entidades de apoio.
 
 | Nome | RM |
 |---|---|
-| [PREENCHER - nome completo] | [PREENCHER - RM] |
-| [PREENCHER - nome completo] | [PREENCHER - RM] |
-| [PREENCHER - nome completo] | [PREENCHER - RM] |
+| Ana Clara Silveira Salvatico | 555389 |
+| Eduardo Rodrigues Fernandes | 557219 |
+| Emily Pereira Ribeiro | 554704 |
+| Fernanda Pereira Molina Teixeira | 552587 |
+| Vinicius Eiki Franca | 555150 |
 
 ## Links
 
