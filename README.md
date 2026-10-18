@@ -27,7 +27,7 @@ e `Camera` como entidades de apoio.
 - **Backend (este repositorio):** https://github.com/lazuli-fiap/metaindustria-api
 - **Frontend (app Expo, branch `sprint-3-integracao-api`):** https://github.com/EmilyPereiraRibeiroAcad/sprint-mobile/tree/sprint-3-integracao-api
   (o README do frontend tem o passo a passo completo de integracao)
-- **Video de demonstracao (YouTube, nao listado):** [PREENCHER - link do video]
+- **Video de demonstracao (YouTube, nao listado):** https://youtu.be/M4W3jwXMe8o
 
 ## Stack e pre-requisitos
 
